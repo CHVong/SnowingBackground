@@ -1,6 +1,10 @@
 const canvas = document.querySelector('canvas')
 const context = canvas.getContext('2d')
 
+const background = new Image();
+background.src = 'digitalartnightsamurai.png'
+
+
 const width = canvas.width = window.innerWidth //set height and width to canvas
 const height = canvas.height = window.innerHeight
 
@@ -61,6 +65,7 @@ function loopAnimation() {
     
     context.fillStyle = 'rgba(0,0,0,0.6)'
     context.fillRect(0,0,width,height)
+    context.drawImage(background,0,0,width,height);
     for(const ball of balls) {
         ball.draw()
         ball.update()
