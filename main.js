@@ -65,7 +65,7 @@ function loopAnimation() {
     
     context.fillStyle = 'rgba(0,0,0,0.6)'
     context.fillRect(0,0,width,height)
-    context.drawImage(background,0,0,width,height);
+    // context.drawImage(background,0,0,width,height);
     for(const ball of balls) {
         ball.draw()
         ball.update()
